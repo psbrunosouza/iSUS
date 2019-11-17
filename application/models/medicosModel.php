@@ -1,20 +1,16 @@
 <?php
-   class medicosModel extends CI_model {
-      public $cpfMedico;
-      public $senha;
-      public $nomeMedico;
-      public $genero;
-      public $nascimento;
-      public $rg;
-      public $crm;
-      public $telefone;
-      public $email;
-      public $codEspecialidade;
+    class medicosModel extends CI_Model{
+        public $nomeMedico;
+        public $genero;
+        public $nascimento;
+        public $telefone;
+        public $email;
 
-      public function SelecionarTodos(){
-         $retorno = $this->db->get('MEDICOS',100);
+        public function selectAll(){
 
-         return $retorno->result();
-      }
-   }
- ?>
+            $query = $this->db->get('medicos', 100);
+
+            return $query->result();
+        }
+    }
+?>
