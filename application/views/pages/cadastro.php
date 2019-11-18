@@ -1,10 +1,4 @@
-
-
-
-
-
-
- <div class="container">
+<div class="container">
 
     <div class="card border-primary mb-3 mx-auto mt-5" style="max-width: ;">
           <div class="card-header">SUSA - Cadastro</div>
@@ -52,14 +46,14 @@
                               "maxlenght" => "24"
                             ));
                         echo "</div>";
-                      echo "</div>";
+                      echo "</div>";               
 
                       echo "<div class='row col-12'>";
                          echo "<div class='form-group col-6'>";
                            echo form_label($label_text = "Cidade", $id = "cidade");
                            echo form_dropdown(
-                              'cidade',
-                              array("SSA" => "Salvador", "CAM" => "Camaçari", "MSJ" => "Mata de São João","STA" => "Santo Amaro"),
+                              'cidades',
+                              $cidades,
                               'SSA',
                               'class="form-control"'
                            );
@@ -67,8 +61,8 @@
                         echo "<div class='form-group col-6'>";
                            echo form_label($label_text = "Estado", $id = "estado");
                            echo form_dropdown(
-                              'estado',
-                              array("BA" => "Bahia"),
+                              'estados',
+                              $estados,
                               'BA',
                               'class="form-control"'
                            );
