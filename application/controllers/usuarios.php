@@ -9,16 +9,9 @@
          $usuario = array(
             "cpf" => $this->input->post("cpf"),
             "senha" => md5 ($this->input->post("senha")),
-            "nomeUsuario" => $this->input->post("nome"),
-            "genero" => 'M',
-            "nascimento" => '1996-06-15',
-            "rg" => '242424242',
-            "crm" => '55',
-            "telefone" => '123',
+            "nome" => $this->input->post("nome"),
             "email" => $this->input->post("email"),
-            "tipo" => '2',
-            "codEspecialidade" => '9999',
-            "codCidade" => 'SSA'
+            "tipo" => 'usr'
          );
 
           $this->load->model("usuarios_model");
