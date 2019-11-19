@@ -24,8 +24,8 @@
                   "class" => "form-control",
                   "maxlenght" => "24"
                 ));
-            echo form_close();
              ?>
+             
             <div>
                 <button type="button" class="btn btn-link"><a href="#rs">Registre-se</a></button>
             </div>
@@ -33,9 +33,9 @@
                 <button type="button" class="btn btn-link"><a href="#ra">Recuperar acesso</a></button>
             </div>
             <div>
-                <button type="button" class="btn btn-link"><a href="#en">Entrar</a></button>
+                <button type="submit" class="btn btn-link">Entrar</button>
             </div>
-        </form>
+            <?php echo form_close(); ?>
       </div>
     </div>
 </div>
