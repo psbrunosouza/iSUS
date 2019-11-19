@@ -49,50 +49,7 @@
                         echo "</div>";
                       echo "</div>";
 
-                      echo "<div class='row col-12'>";
-                         echo "<div class='form-group col-6'>";
-                           echo form_label($label_text = "Cidade", $id = "cidade");
-                           echo form_dropdown(
-                              'cidades',
-                              $cidades,
-                              'SSA',
-                              'class="form-control"'
-                           );
-                        echo "</div>";
-                        echo "<div class='form-group col-6'>";
-                           echo form_label($label_text = "Estado", $id = "estado");
-                           echo form_dropdown(
-                              'estados',
-                              $estados,
-                              'BA',
-                              'class="form-control"'
-                           );
-                        echo "</div>";
-                      echo "</div>";
-
-                      echo "<div class='row col-12'>";
-                         echo "<div class='form-group col-10'>";
-                           echo form_label ($label_text = "Masculino", $id = "masculino");
-                           $dataM = array(
-                            'name'          => 'genero',
-                            'id'            => 'masculino',
-                            'value'         => 'Masculino',
-                            'checked'       => TRUE
-                           );
-                           echo form_radio($dataM);
-
-                           echo "&nbsp;&nbsp;";
-
-                           echo form_label ($label_text = "Feminino", $id = "feminino");
-                           $dataF = array(
-                            'name'          => 'genero',
-                            'id'            => 'feminino',
-                            'value'         => 'Feminino',
-                            'checked'       => FALSE
-                           );
-                           echo form_radio($dataF);
-                         echo "</div>";
-
+                      echo "<div class='row col-12'>";                        
                          echo "<div class='btn-group col-2'>";
                             echo form_button(array(
                               "class" => "btn btn-primary",
