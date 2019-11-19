@@ -32,9 +32,6 @@
             <div>
                 <button type="button" class="btn btn-link"><a href="#ra">Recuperar acesso</a></button>
             </div>
-            <div>
-                <button type="button" class="btn btn-link"><a href="#en">Entrar</a></button>
-            </div>
         </form>
       </div>
     </div>
