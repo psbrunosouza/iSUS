@@ -1,6 +1,6 @@
         <footer>
-            <div class="container-fluid bg-primary">
-               está merda é o footer
+            <div class="bg-primary">
+
             </div>
 
         </footer>
