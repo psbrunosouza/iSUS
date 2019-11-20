@@ -2,18 +2,17 @@
     class Login extends CI_Controller{
 
       public function index(){
+
          $this->load->view("templates/head");
          $this->load->view("pages/login");
+
       }
 
       public function autenticar(){
-
          $this->load->model("usuarios_model");
-
          $cpf = $this->input->post("cpf");
          $senha = md5($this->input->post("senha"));
          $usuario = $this->usuarios_model->logarUsuarios($cpf, $senha);
-
 
          /*Teste para verificar se usuario existe*/
          if($usuario){
