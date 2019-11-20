@@ -8,7 +8,7 @@
        public function novo(){
          $usuario = array(
             "cpf" => $this->input->post("cpf"),
-            "senha" => md5 ($this->input->post("senha")),
+            "senha" => md5($this->input->post("senha")),
             "nome" => $this->input->post("nome"),
             "email" => $this->input->post("email"),
             "tipo" => 'usr'

@@ -1,3 +1,4 @@
+
 <div class="container-fluid" style="height: 25em;">
     <table class="table">
           <thead>
@@ -32,5 +33,6 @@
 
                 <?php } ?>
           </tbody>
+
     </table>
 </div>
