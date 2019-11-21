@@ -1,16 +1,16 @@
 <?php
-
     class principalPacientes extends CI_Controller{
 
         public function index(){
 
+            $localSession = $this->session->usuario_logado;
+            $id = $localSession['cpf'];
+
             $this->load->model("consultas_model");
-            $consultas = $this->consultas_model->selectAll();
+            $consultas = $this->consultas_model->selectById($id);
 
             $dados = array(
-                'titulo' => 'Consultas',
                 'consultas' => $consultas,
-                'pagina' => 'pages/principalPacientes.php'
             );
 
             $this->load->view("templates/head");
@@ -18,7 +18,6 @@
             $this->load->view("pages/principalPacientes", $dados);
             $this->load->view("templates/footer");
         }
-
     }
 
 ?>

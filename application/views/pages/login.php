@@ -26,7 +26,7 @@
                 ));
 
                 echo form_label ($label_text = "Senha: ", $id = "senha");
-                echo form_input(array (
+                echo form_password(array (
                   "name" => "senha",
                   "id" =>  "senha",
                   "class" => "form-control",

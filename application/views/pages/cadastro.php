@@ -7,7 +7,7 @@
             <p class="card-text">Cadastra ai teu fila da puta.</p>
 
                 <?php
-                   echo form_open("usuarios/novo");
+                   echo form_open("cadastro/novo");
                      echo "<div class='row col-12'>";
                         echo "<div class='col-6'>";
                             echo form_label ($label_text = "Nome completo", $id = "nome");
@@ -49,7 +49,7 @@
                         echo "</div>";
                       echo "</div>";
 
-                      echo "<div class='row col-12'>";                        
+                      echo "<div class='row col-12'>";
                          echo "<div class='btn-group col-2'>";
                             echo form_button(array(
                               "class" => "btn btn-primary",
