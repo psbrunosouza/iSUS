@@ -12,7 +12,7 @@
                     redirect("/principalMedicos");
                 }
             }else{
-                redirect("/login");
+                redirect("/loginUsuario");
             }
         }
     }

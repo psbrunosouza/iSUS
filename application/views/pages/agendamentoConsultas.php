@@ -20,21 +20,28 @@
               <table class="table">
               <thead class="thead-light">
                     <tr>
-                          <th scope="col">#</th>
+
                           <th scope="col">Médico</th>
                           <th scope="col">Especialidade</th>
-                          <th scope="col">Horário</th>
+                          <th scope="col">Data</th>
+                          <th scope="col">Hora</th>
                           <th scope="col">Marcar</th>
                     </tr>
               </thead>
               <tbody>
+
+                  <?php
+                   foreach($medicosPorEspecialidade as $medEsp){
+                       ?>
                     <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>Otto</td>
-                          <td><button class="btn btn-primary">Agendar</button></td>
+                          <td><?= $medEsp->nome ?></td>
+                          <td><?= $medEsp->nomeEsp ?></td>
+                          <td><?= $medEsp->dataAtdm ?></td>
+                          <td><?= $medEsp->horaAtdm ?></td>
+                          <td><p> <?= anchor('agendamentoConsultas/agendar?id='. $medEsp->codConsultas, 'agendar'); ?></p></td>
+
                     </tr>
+                <?php } ?>
                   </tbody>
             </table>
         </div>

@@ -7,7 +7,7 @@
             <p class="card-text">Cadastra ai teu fila da puta.</p>
 
                 <?php
-                   echo form_open("cadastro/novo");
+                   echo form_open("cadastroUsuario/novo");
                      echo "<div class='row col-12'>";
                         echo "<div class='col-6'>";
                             echo form_label ($label_text = "Nome completo", $id = "nome");
@@ -17,6 +17,7 @@
                               "class" => "form-control",
                               "maxlenght" => "255"
                             ));
+                            echo form_error("nome", "");
                         echo "</div>";
                         echo "<div class='col-6'>";
                             echo form_label ($label_text = "Email", $id = "email");
@@ -26,6 +27,7 @@
                               "class" => "form-control",
                               "maxlenght" => "24"
                             ));
+                            echo form_error("email", "");
                          echo "</div>";
                       echo "</div>";
 
@@ -37,6 +39,7 @@
                              "id" =>  "cpf",
                              "class" => "form-control"
                             ));
+                            echo form_error("cpf", "");
                         echo "</div>";
                         echo "<div class='col-6'>";
                             echo form_label ($label_text = "Senha", $id = "senha");
@@ -46,6 +49,7 @@
                               "class" => "form-control",
                               "maxlenght" => "24"
                             ));
+                            echo form_error("senha", "");
                         echo "</div>";
                       echo "</div>";
 

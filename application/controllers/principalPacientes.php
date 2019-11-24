@@ -2,21 +2,35 @@
     class principalPacientes extends CI_Controller{
 
         public function index(){
+            //Pegar usuario logado na sessao
+            $usuario = $this->session->usuario_logado;
+            $cpf = $usuario['cpf'];
 
-            $localSession = $this->session->usuario_logado;
-            $id = $localSession['cpf'];
+            //Verificacao de usuario logado
+            if($usuario){
 
+                $this->load->model("Consultas_model");
+                $consultas = $this->Consultas_model->selecionar_por_cpf($cpf);
+
+                $dados = array(
+                    'consultas' => $consultas
+                );
+
+                $this->load->view("templates/head");
+                $this->load->view("templates/header");
+                $this->load->view("pages/principalPacientes", $dados);
+                $this->load->view("templates/footer");
+            }else{
+                redirect('/loginUsuario');
+            }
+        }
+
+        public function deletarConsulta(){
+            $id = $this->input->get("id");
             $this->load->model("consultas_model");
-            $consultas = $this->consultas_model->selectById($id);
+            $this->consultas_model->deletar_consulta($id);
 
-            $dados = array(
-                'consultas' => $consultas,
-            );
-
-            $this->load->view("templates/head");
-            $this->load->view("templates/header");
-            $this->load->view("pages/principalPacientes", $dados);
-            $this->load->view("templates/footer");
+            redirect("/principalPacientes");
         }
     }
 

@@ -29,3 +29,35 @@ FOREIGN KEY(cpfUsuario) REFERENCES USUARIOS(cpf);
 ALTER TABLE USUARIOS ADD 
 FOREIGN KEY(codEsp) REFERENCES especialidades(codEsp);
 
+INSERT INTO ESPECIALIDADES VALUES
+(null,
+'Ginecologista',
+'Undefined'),
+
+(null,
+'Neurologista',
+'Undefined'),
+
+(null,
+'Pediatra',
+'Undefined'),
+
+(null,
+'Cardiologista',
+'Undefined')
+;
+
+
+INSERT INTO USUARIOS VALUES(
+
+);
+
+CREATE TABLE USUARIOS(
+    cpf VARCHAR(11) NOT NULL PRIMARY KEY,
+    senha VARCHAR(255) NOT NULL,
+    nome VARCHAR(200) NOT NULL,
+    email VARCHAR(200) NOT NULL,
+    tipo CHAR(3) NOT NULL,
+    codEsp INT NOT NULL
+);
+

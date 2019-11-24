@@ -16,7 +16,7 @@
         <p class="card-text">Entre com suas credencias de acesso ou siga para a
             página de registro para novos usuários.</p>
             <?php
-            echo form_open("login/autenticar");
+            echo form_open("loginUsuario/autenticar");
                 echo form_label ($label_text = "CPF: ", $id = "cpf");
                 echo form_input(array (
                   "name" => "cpf",
@@ -25,6 +25,8 @@
                   "maxlenght" => "11"
                 ));
 
+                echo form_error("cpf", "");
+
                 echo form_label ($label_text = "Senha: ", $id = "senha");
                 echo form_password(array (
                   "name" => "senha",
@@ -32,13 +34,12 @@
                   "class" => "form-control",
                   "maxlenght" => "24"
                 ));
+
+                echo form_error("senha", "");
              ?>
 
             <div>
-                <button type="button" class="btn btn-link"><a href="#rs">Registre-se</a></button>
-            </div>
-            <div>
-                <button type="button" class="btn btn-link"><a href="#ra">Recuperar acesso</a></button>
+                <a href="<?php echo site_url('/cadastroUsuario'); ?>" class="btn btn-link">Cadastre-se</a>
             </div>
             <div>
                 <button type="submit" class="btn btn-link">Entrar</button>
