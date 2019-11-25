@@ -37,6 +37,12 @@
             $this->db->delete('consultas', array('codConsultas' => $id));
         }
 
+        public function liberar_consulta($id){
+            $this->db->set('cpfUsuario', '00000000000');
+            $this->db->where('codConsultas', $id);
+            $this->db->update('consultas');
+        }
+
         public function salvar($id){
             $this->db->insert("consultas", $id);
         }

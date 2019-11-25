@@ -29,7 +29,7 @@
         public function deletarConsulta(){
             $id = $this->input->get("id");
             $this->load->model("consultas_model");
-            $this->consultas_model->deletar_consulta($id);
+            $this->consultas_model->liberar_consulta($id);
 
             redirect("/principalPacientes");
         }

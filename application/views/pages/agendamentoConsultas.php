@@ -17,7 +17,7 @@
         </div>
         <div class="card-body">
               <h5 class="card-title">Medicos e horários disponíveis para atendimento</h5>
-              <table class="table">
+              <table class="table table-hover table-sm table-bordeless text-center">
               <thead class="thead-light">
                     <tr>
 

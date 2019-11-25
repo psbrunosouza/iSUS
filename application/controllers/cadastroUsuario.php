@@ -9,7 +9,7 @@
 
         public function novo(){
             $this->load->view("templates/head");
-            $this->form_validation->set_rules("cpf", "cpf", "required|max_length[11]");
+            $this->form_validation->set_rules("cpf", "cpf", "required|max_length[11]|min_length[11]");
             $this->form_validation->set_rules("senha", "senha", "required|min_length[8]|max_length[16]");
             $this->form_validation->set_rules("nome", "nome", "required|min_length[4]|max_length[24]");
             $this->form_validation->set_rules("email", "email", "required|max_length[24]|valid_email");
