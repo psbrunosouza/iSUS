@@ -8,7 +8,7 @@
                    <input type="hidden" name="id" value="<?= $esp->codEsp; ?>"/>
                    <h5 class="card-title"> <?=  $esp->nomeEsp; ?></h5>
                    <p class="card-text"><?= $esp->descricao; ?></p>
-                   <a> <?= anchor('agendamentoConsultas?id='.$esp->codEsp, 'agendar'); ?></a>
+                   <a class="btn btn-primary btn-sm" href="<?= site_url('agendamentoConsultas?id='.$esp->codEsp); ?>"> Agendar </a>
                  </div>
                </div>
              </div>

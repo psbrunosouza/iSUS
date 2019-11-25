@@ -38,7 +38,7 @@
                           <td><?= $medEsp->nomeEsp ?></td>
                           <td><?= $medEsp->dataAtdm ?></td>
                           <td><?= $medEsp->horaAtdm ?></td>
-                          <td><p> <?= anchor('agendamentoConsultas/agendar?id='. $medEsp->codConsultas, 'agendar'); ?></p></td>
+                          <td><a class="btn btn-primary btn-sm" href="<?= site_url('agendamentoConsultas/agendar?id='. $medEsp->codConsultas); ?>"> Agendar </a></td>
 
                     </tr>
                 <?php } ?>

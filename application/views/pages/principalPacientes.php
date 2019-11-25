@@ -38,8 +38,8 @@
                                       <td><?= $con->dataAtdm ?></td>
                                       <td><?= $con->horaAtdm ?></td>
                                       <td><?= $con->nomeEsp ?></td>
-                                      <td><a>
-                                          <?= anchor('principalPacientes/deletarConsulta?id='. $con->codConsultas, 'Apagar'); ?>
+                                      <td><a class="btn btn-danger btn-sm" href="<?= site_url('principalPacientes/deletarConsulta?id='. $con->codConsultas); ?>">
+                                          Apagar
                                       </a></td>
                                 </tr>
 
