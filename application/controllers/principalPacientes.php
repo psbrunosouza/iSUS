@@ -17,6 +17,7 @@
                 );
 
                 $this->load->view("templates/head");
+                $this->load->view("templates/navbarUsuario");
                 $this->load->view("templates/header");
                 $this->load->view("pages/principalPacientes", $dados);
                 $this->load->view("templates/footer");

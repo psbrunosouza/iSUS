@@ -3,7 +3,7 @@
 
 <div class="container">
     <h1> Agendamento </h1>
-    <p> Preencha o formulário abaixo para agendar uma nova consulta.</p>
+    <p> Selecione um especialista nos horários disponíveis abaixo.</p>
 
     <?php form_open("agendamento/agendar");?>
 

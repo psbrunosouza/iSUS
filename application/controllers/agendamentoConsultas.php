@@ -14,6 +14,7 @@
 
             if($usuario){
                 $this->load->view("templates/head.php");
+                $this->load->view("templates/navbarUsuario.php");
                 $this->load->view("templates/header.php");
                 $this->load->view("pages/agendamentoConsultas", $dados);
                 $this->load->view("templates/footer.php");
@@ -31,7 +32,7 @@
             $this->consultas_model->salvar_consulta($id, $usuario);
 
 
-            redirect('/agendamentoConsultas');
+            redirect('/');
         }
     }
 ?>

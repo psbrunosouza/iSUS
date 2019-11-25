@@ -40,6 +40,13 @@
              $this->load->view("pages/loginUsuario");
          }
       }
+
+      public function logout(){
+          $this->session->unset_userdata("usuario_logado");
+          $this->session->flashdata("sucess", "Usuario deslogado com sucesso");
+
+          redirect("/");
+      }
     }
 
 ?>

@@ -16,6 +16,7 @@
             );
 
             $this->load->view("templates/head");
+            $this->load->view("templates/navbarMedico");
             $this->load->view("templates/header");
             $this->load->view("pages/principalMedicos", $dados);
             $this->load->view("templates/footer");
@@ -44,7 +45,6 @@
         }
 
         public function editarConsulta(){
-
             $id = $this->input->get('id');
             $this->load->model("consultas_model");
             $consultas_id = $this->consultas_model->consultas_id($id);
@@ -56,6 +56,7 @@
             );
 
             $this->load->view("templates/head");
+            $this->load->view("templates/navbarMedico");
             $this->load->view("templates/header");
             $this->load->view("pages/editarConsulta", $dados);
             $this->load->view("templates/footer");

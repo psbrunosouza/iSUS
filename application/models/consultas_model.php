@@ -22,6 +22,7 @@
 
         public function selecionar_consultas_agendadas($cpf){
             $this->db->where("consultas.cpfMedico" , $cpf);
+            $this->db->where("consultas.cpfUsuario" , "00000000000");
             $query = $this->db->get('consultas');
             return $query->result();
         }

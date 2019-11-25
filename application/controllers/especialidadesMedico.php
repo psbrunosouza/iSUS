@@ -16,6 +16,7 @@
             //verificar usuario logado
             if($usuario){
                 $this->load->view("templates/head");
+                $this->load->view("templates/navbarUsuario");
                 $this->load->view("templates/header");
                 $this->load->view("pages/especialidadeMedico", $dados);
                 $this->load->view("templates/footer");

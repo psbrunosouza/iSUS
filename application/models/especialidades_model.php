@@ -1,7 +1,8 @@
 <?php
     class Especialidades_model extends CI_Model{
         public function selecionar_especialidades(){
-            $query = $this->db->get('especialidades', 100);
+            $this->db->where('especialidades.codEsp !=', '9999');
+            $query = $this->db->get('especialidades');
             return $query->result();
         }
 
