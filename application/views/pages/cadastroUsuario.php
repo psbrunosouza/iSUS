@@ -1,10 +1,10 @@
 
  <div class="container">
 
-    <div class="card border-primary mb-3 mx-auto mt-5" style="max-width: ;">
+    <div class="card border-primary mb-3 mx-auto mt-5" >
           <div class="card-header">SUSA - Cadastro</div>
           <div class="card-body text-dark">
-            <p class="card-text">Cadastra ai teu fila da puta.</p>
+            <p class="card-text">Cadastre-se já e comece a agendar suas consultas.</p>
 
                 <?php
                    echo form_open("cadastroUsuario/novo");
@@ -53,7 +53,7 @@
                         echo "</div>";
                       echo "</div>";
 
-                      echo "<div class='row col-12'>";
+                      echo "<div class='row col-12 mt-3'>";
                          echo "<div class='btn-group col-2'>";
                             echo form_button(array(
                               "class" => "btn btn-primary",
